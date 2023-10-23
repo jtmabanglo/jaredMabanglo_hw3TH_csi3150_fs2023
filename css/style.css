@@ -1,0 +1,361 @@
+/* Font Family from Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+/* To suppress default border and styling and select alt box model*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting of theme colors and font family of entire body */
+body {
+  font-family: "Tilt Neon", cursive;
+  --lightblue: #e0fbfc;
+  --lightGreen: #c7e6c6;
+  --grey: #5c6b73;
+  --darkBlue: #253237;
+  --darkGreen: #0d1c0c;
+}
+
+/* Hero Section Styling */
+#heroSection {
+  /* background image reference: https://www.w3schools.com/cssref/pr_background-image.php */
+  background-image: url(../img/heroSectionBg.jpg);
+  /* for darkening background: https://linuxhint.com/different-methods-to-darken-background-image-css/ */
+  background-color: rgb(176, 176, 176);
+  background-blend-mode: multiply;
+  height: 900px;
+  background-size: cover;
+  display: flex;
+  /* for making flex in column direction: https://www.w3schools.com/css/css3_flexbox_container.asp */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  padding: 200px;
+}
+
+#logoContainer {
+  font-size: 150px;
+  color: var(--darkGreen);
+  /* for Text Shadow:https://www.w3schools.com/cssref/css3_pr_text-shadow.php  */
+  text-shadow: 0px 3px 20px #fff;
+}
+
+#heroText {
+  align-items: center;
+}
+
+#heroText h1 {
+  font-size: 150px;
+  text-align: center;
+  color: var(--darkGreen);
+  /* for Text Shadow:https://www.w3schools.com/cssref/css3_pr_text-shadow.php  */
+  text-shadow: 0px 3px 17px #fff;
+  margin-bottom: 20px;
+}
+
+#heroText h2 {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+#heroSectionArrow {
+  margin: 30px;
+  font-size: 70px;
+  color: var(--lightGreen);
+}
+
+/* styling for Dropdown Menus - regular and small */
+.Dropdown {
+  background-color: var(--lightGreen);
+  text-align: center;
+  padding: 70px;
+  color: black;
+  font-size: 20px;
+}
+
+.smallDropdown {
+  background-color: var(--lightGreen);
+  text-align: center;
+  padding: 30px;
+  color: black;
+  font-size: 20px;
+  width: 400px;
+}
+
+/* styling for first Info Section */
+#firstInfoSection {
+  background-image: url("../img/firstInfoSectionBg.jpg");
+  background-color: rgb(176, 176, 176);
+  background-blend-mode: multiply;
+  height: 700px;
+  background-size: cover;
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  padding: 50px;
+}
+
+/* Generic Styling of any section title*/
+.sectionTitle {
+  margin: 70px;
+  font-size: 50px;
+  color: var(--lightGreen);
+  text-shadow: 0px 3px 17px black;
+}
+/* Generic Styling for any section text */
+.sectionText {
+  margin-top: 70px;
+}
+
+.sectionText p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Generic Styling of all buttons */
+.button {
+  background-color: var(--darkGreen);
+  border: none;
+  padding: 15px 40px;
+  color: white;
+  font-family: "Tilt Neon", cursive;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #1c3b1a;
+}
+
+/* styling for 3 destinations section */
+#destGallery {
+  background-image: url("../img/destGalleryBg.jpg");
+  height: 1000px;
+  background-size: cover;
+  background-color: rgb(176, 176, 176);
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#destGalleryTitle {
+  font-size: 50px;
+  color: var(--lightGreen);
+  text-shadow: 0px 3px 17px black;
+  margin-top: 60px;
+}
+
+/* Styling and formatting for the container holding 3 destinations */
+#photoContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 50px;
+  color: white;
+}
+
+#photoContainer img {
+  height: 600px;
+  width: 400px;
+}
+
+/* formatting title text in bottom-left corner of pictures*/
+#photoContainer div {
+  /* locked height and width of photoContainer to make sure titles do not shift when the dropdown menu opens */
+  height: 600px;
+  width: 400px;
+  position: relative;
+}
+
+/* how to align the text in the bottom-left corner: https://www.w3schools.com/howto/howto_css_image_text.asp */
+#photoContainer h3 {
+  font-size: 40px;
+  position: absolute;
+  bottom: 90px;
+  left: 40px;
+  text-shadow: 0px 3px 15px black;
+}
+
+#photoContainer i {
+  font-size: 40px;
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  text-shadow: 0px 3px 15px black;
+  color: var(--lightGreen);
+}
+
+/* Styling for tour informational section */
+#tourSection {
+  background-image: url("../img/tourSectionBG.jpg");
+  height: 950px;
+  background-size: cover;
+  background-color: rgb(136, 136, 136);
+  background-blend-mode: multiply;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  padding: 40px;
+}
+
+/* Styling for subtitles within sectionText */
+.sectionText h3 {
+  font-size: 30px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+/* Styling for fourCircles Section */
+#fourCircles {
+  background-image: url("../img/fourCirclesBG.jpg");
+  height: 600px;
+  background-size: cover;
+  background-color: rgb(176, 176, 176);
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#fourCircles div {
+  background-color: var(--darkBlue);
+  /* Border radius 50% gives circular look to square divs */
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+}
+
+#fourCircles h1 {
+  padding-top: 65px;
+  color: var(--lightblue);
+  font-size: 100px;
+}
+
+#fourCircles h2 {
+  font-size: 20px;
+  color: var(--lightGreen);
+}
+
+/* styling for testimonial section */
+#testimonial {
+  background-image: url("../img/testimonialBG.jpg");
+  height: 800px;
+  background-size: cover;
+  background-color: rgb(176, 176, 176);
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+/* For circular cropping of portrait: https://www.webfx.com/blog/web-design/circular-images-css/#:~:text=The%20main%20CSS%20property%20responsible%20for%20the%20circular%20shape%20is,height%20results%20in%20a%20circle. */
+#profilePicContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#testimonial img {
+  width: 100%;
+  height: auto;
+}
+
+#testimonial p {
+  font-size: 20px;
+  text-align: center;
+  padding: 50px;
+  color: white;
+}
+
+#testimonial h3 {
+  font-size: 30px;
+  color: white;
+}
+
+#testimonial i {
+  padding-top: 50px;
+  font-size: 70px;
+  color: var(--lightGreen);
+}
+
+/* Styling for bottom photo gallery */
+#bottomGallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* to resize images dynamically: https://www.w3schools.com/css/css_rwd_images.asp */
+#bottomGallery img {
+  width: 100%;
+  height: auto;
+}
+
+/* styling for Contact us Footer at the bottom */
+#contactUs {
+  background-image: url("../img/contactUsBG.jpg");
+  height: 600px;
+  background-size: cover;
+  background-color: rgb(176, 176, 176);
+  background-blend-mode: multiply;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#contactNumbersContainer {
+  color: white;
+  margin-left: 70px;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+#socialMediaLinks {
+  padding-top: 20px;
+  padding-left: 60px;
+}
+#socialMediaLinks a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+}
+
+#socialMediaLinks a:hover {
+  color: var(--lightGreen);
+  text-shadow: 0px 3px 20px black;
+}
+
+/* styling for contact form */
+#contactForm {
+  padding: 70px;
+}
+#contactForm label {
+  color: white;
+  font-size: 30px;
+}
+#contactForm input {
+  font-family: "Tilt Neon", cursive;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+}
+
+#contactForm textarea {
+  font-family: "Tilt Neon", cursive;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+}
